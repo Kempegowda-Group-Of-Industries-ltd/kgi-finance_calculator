@@ -11,16 +11,14 @@ from calculators.compound_interest_calculator import compound_interest_calculato
 
 # Sidebar for navigation
 st.sidebar.title("Finance Calculators & Simulators")
-option = st.sidebar.selectbox(
-    "Choose a calculator:", 
-    ["Loan Calculator", 
-     "Investment Growth", 
-     "Budget Tracker", 
-     "Retirement Calculator", 
-     "Mortgage Calculator",  # New
-     "Auto Loan Calculator",  # New
-     "Compound Interest Calculator"]  # New
-)
+option = st.sidebar.selectbox("Choose a calculator:", 
+                             ["Loan Calculator", 
+                              "Investment Growth", 
+                              "Budget Tracker", 
+                              "Retirement Calculator",
+                              "Mortgage Calculator",
+                              "Auto Loan Calculator",
+                              "Compound Interest Calculator"])
 
 # Render the appropriate calculator based on user selection
 if option == "Loan Calculator":
