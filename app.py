@@ -1,4 +1,8 @@
 import streamlit as st
+import numpy as np
+import pandas as pd
+import numpy_financial as npf
+import matplotlib.pyplot as plt
 
 from calculators.loan_calculator import loan_calculator
 from calculators.investment_calculator import investment_calculator
