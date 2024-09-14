@@ -121,19 +121,7 @@ def plot_auto_loan_amortization(months, remaining_balance, principal_paid, inter
     
     st.pyplot(fig)
 
-def plot_compound_interest_growth(months, growth):
-    """Plots compound interest growth over time."""
-    fig, ax = plt.subplots()
-    
-    ax.plot(months, growth, label="Compound Interest Growth", color='purple', linewidth=2)
-    
-    ax.set_xlabel("Months")
-    ax.set_ylabel("Value (₹)")
-    ax.set_title("Compound Interest Growth")
-    ax.legend()
-    ax.grid(True)
-    
-    st.pyplot(fig)
+
 import matplotlib.pyplot as plt
 import streamlit as st
 
@@ -185,19 +173,7 @@ def plot_auto_loan_amortization(months, remaining_balance, principal_paid, inter
     
     st.pyplot(fig)
 
-def plot_compound_interest_growth(months, growth):
-    """Plots compound interest growth over time."""
-    fig, ax = plt.subplots()
-    
-    ax.plot(months, growth, label="Compound Interest Growth", color='purple', linewidth=2)
-    
-    ax.set_xlabel("Months")
-    ax.set_ylabel("Value (₹)")
-    ax.set_title("Compound Interest Growth")
-    ax.legend()
-    ax.grid(True)
-    
-    st.pyplot(fig)
+
 # File: utils/graph_utils.py
 
 import matplotlib.pyplot as plt
@@ -215,3 +191,23 @@ def plot_retirement_projection(months, growth):
     
     # Display the plot in Streamlit
     st.pyplot(fig)
+
+# File: utils/graph_utils.py
+
+import matplotlib.pyplot as plt
+import streamlit as st
+
+def plot_compound_interest(months, growth):
+    """Plots the compound interest growth over time."""
+    fig, ax = plt.subplots()
+    
+    ax.plot(months, growth, label="Compound Interest Growth", color='blue', linestyle='-', linewidth=2)
+    
+    ax.set_xlabel("Months")
+    ax.set_ylabel("Value (₹)")
+    ax.set_title("Compound Interest Growth Over Time")
+    ax.legend()
+    ax.grid(True)
+    
+    st.pyplot(fig)
+
