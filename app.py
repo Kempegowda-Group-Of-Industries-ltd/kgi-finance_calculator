@@ -12,6 +12,15 @@ from calculators.mortgage_calculator import mortgage_calculator
 from calculators.auto_loan_calculator import auto_loan_calculator
 from calculators.compound_interest_calculator import compound_interest_calculator
 
+# File: app.py
+
+import streamlit as st
+from calculators.retirement_calculator import retirement_calculator
+
+   
+
+
+
 # Sidebar for navigation
 st.sidebar.title("Finance Calculators & Simulators")
 option = st.sidebar.selectbox("Choose a calculator:", 
