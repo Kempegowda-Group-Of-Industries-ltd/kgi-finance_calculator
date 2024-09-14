@@ -1,3 +1,5 @@
+import streamlit as st
+
 from calculators.loan_calculator import loan_calculator
 from calculators.investment_calculator import investment_calculator
 from calculators.budget_calculator import budget_calculator
