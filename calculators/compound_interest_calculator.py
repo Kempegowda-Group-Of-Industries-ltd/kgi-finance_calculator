@@ -3,6 +3,13 @@ import pandas as pd
 import streamlit as st
 from utils.graph_utils import plot_compound_interest_growth
 
+# File: calculators/compound_interest_calculator.py
+
+import streamlit as st
+import numpy_financial as npf
+import numpy as np
+from utils.graph_utils import plot_compound_interest
+
 def compound_interest_calculator():
     st.header("Compound Interest Calculator")
     
