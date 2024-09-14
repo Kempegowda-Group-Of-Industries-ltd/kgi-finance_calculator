@@ -1,4 +1,15 @@
+
 import numpy_financial as npf
+# File: calculators/mortgage_calculator.py
+
+import streamlit as st
+import numpy_financial as npf
+import numpy as np
+from utils.graph_utils import plot_amortization_schedule
+
+def mortgage_calculator():
+    st.header("Mortgage Calculator")
+    # Add mortgage calculator logic and amortization schedule here
 
 def mortgage_calculator():
     loan_amount = st.number_input("Loan Amount", min_value=0.0, value=1000000.0)
