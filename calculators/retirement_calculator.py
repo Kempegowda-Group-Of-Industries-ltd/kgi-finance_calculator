@@ -1,5 +1,6 @@
 import streamlit as st
 import numpy as np
+import numpy_financial as npf
 import matplotlib.pyplot as plt
 from utils.graph_utils import plot_retirement_projection
 
@@ -16,11 +17,12 @@ def retirement_calculator():
     total_months = years_until_retirement * 12
     monthly_rate = (annual_rate / 100) / 12
 
-    retirement_savings = np.fv(monthly_rate, total_months, -monthly_contribution, -current_savings)
+    # Use numpy_financial's fv function
+    retirement_savings = npf.fv(monthly_rate, total_months, -monthly_contribution, -current_savings)
     st.write(f"**Projected Retirement Savings:** ₹{retirement_savings:,.2f}")
 
     # Retirement savings growth visualization
     months = np.arange(1, total_months + 1)
-    growth = [np.fv(monthly_rate, m, -monthly_contribution, -current_savings) for m in months]
+    growth = [npf.fv(monthly_rate, m, -monthly_contribution, -current_savings) for m in months]
     
     plot_retirement_projection(months, growth)
