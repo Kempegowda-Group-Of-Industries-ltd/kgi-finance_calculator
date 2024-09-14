@@ -4,3 +4,9 @@ pandas      # For handling data in dataframes
 matplotlib # For graph plotting and visualization
 plotly   # Optional: If you want to use interactive graphs
 numpy-financial
+streamlit
+numpy
+pandas
+matplotlib
+plotly
+numpy-financial
