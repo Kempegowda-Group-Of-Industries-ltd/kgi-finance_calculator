@@ -198,3 +198,20 @@ def plot_compound_interest_growth(months, growth):
     ax.grid(True)
     
     st.pyplot(fig)
+# File: utils/graph_utils.py
+
+import matplotlib.pyplot as plt
+import streamlit as st
+
+def plot_retirement_projection(months, growth):
+    """Plots the retirement savings projection over time."""
+    fig, ax = plt.subplots()
+    ax.plot(months, growth, label="Retirement Savings", color='orange', linestyle='-', linewidth=2)
+    ax.set_xlabel("Months")
+    ax.set_ylabel("Value (₹)")
+    ax.set_title("Retirement Savings Projection")
+    ax.legend()
+    ax.grid(True)
+    
+    # Display the plot in Streamlit
+    st.pyplot(fig)
