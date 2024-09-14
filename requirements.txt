@@ -10,3 +10,7 @@ pandas
 matplotlib
 plotly
 numpy-financial
+numpy
+streamlit
+numpy_financial
+matplotlib
