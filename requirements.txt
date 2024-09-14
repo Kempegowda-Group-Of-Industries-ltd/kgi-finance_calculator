@@ -14,3 +14,8 @@ numpy
 streamlit
 numpy_financial
 matplotlib
+numpy
+streamlit
+numpy_financial
+matplotlib
+pandas
