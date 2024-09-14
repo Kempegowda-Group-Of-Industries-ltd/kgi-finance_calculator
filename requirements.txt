@@ -1,5 +1,5 @@
-streamlit==1.25.0  # Ensure you use a recent version of Streamlit
-numpy==1.24.0      # Required for numerical calculations
-pandas==2.0.3      # For handling data in dataframes
-matplotlib==3.7.2  # For graph plotting and visualization
-plotly==5.15.0     # Optional: If you want to use interactive graphs
+streamlit # Ensure you use a recent version of Streamlit
+numpy     # Required for numerical calculations
+pandas      # For handling data in dataframes
+matplotlib # For graph plotting and visualization
+plotly   # Optional: If you want to use interactive graphs
