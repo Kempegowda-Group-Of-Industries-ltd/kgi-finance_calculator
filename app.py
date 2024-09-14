@@ -20,6 +20,7 @@ option = st.sidebar.selectbox("Choose a calculator:",
                               "Auto Loan Calculator",
                               "Compound Interest Calculator"])
 
+
 # Render the appropriate calculator based on user selection
 if option == "Loan Calculator":
     loan_calculator()
