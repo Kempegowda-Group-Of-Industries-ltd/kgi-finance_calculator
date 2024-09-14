@@ -1,5 +1,6 @@
 import streamlit as st
 import numpy as np
+import numpy_financial as npf  # Import the correct library
 import matplotlib.pyplot as plt
 from utils.graph_utils import plot_investment_growth
 
@@ -16,11 +17,12 @@ def investment_calculator():
     total_months = years * 12
     monthly_rate = (annual_rate / 100) / 12
 
-    future_value = np.fv(monthly_rate, total_months, -monthly_contribution, -initial_investment)
+    # Use numpy_financial's fv function
+    future_value = npf.fv(monthly_rate, total_months, -monthly_contribution, -initial_investment)
     st.write(f"**Projected Future Value:** ₹{future_value:,.2f}")
 
     # Visualizing Investment Growth
     months = np.arange(1, total_months + 1)
-    growth = [np.fv(monthly_rate, m, -monthly_contribution, -initial_investment) for m in months]
+    growth = [npf.fv(monthly_rate, m, -monthly_contribution, -initial_investment) for m in months]
     
     plot_investment_growth(months, growth)
